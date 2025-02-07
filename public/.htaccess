@@ -1,0 +1,8 @@
+;had star kaycha3al mode_rewrite f apache bach n9dro nbdlo URLS
+RewriteEngine On
+; Hadi katchecki wach l’URL li talab l’utilisateur kayn f fichier réel.
+RewriteCond %{REQUEST_FILENAME} !-f
+; Hadi katchecki wach l’URL li talab l’utilisateur kayn f dossier réel.
+RewriteCond %{REQUEST_FILENAME} !-d
+;Hadi katredirecti ga3 l’URLs li makaynach f fichiers ou dossiers vers index.php.
+RewriteRule ^(.*)$ index.php [QSA,L]
